@@ -1,0 +1,1804 @@
+{
+  "coureurs": [
+    {
+      "nom": "Jack",
+      "dossard": 1,
+      "masse": 70,
+      "taille": 136,
+      "chaussure": 104,
+      "vmoyenne": 17,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 2,
+      "masse": 69,
+      "taille": 149,
+      "chaussure": 161,
+      "vmoyenne": 20,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 3,
+      "masse": 120,
+      "taille": 135,
+      "chaussure": 116,
+      "vmoyenne": 8,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 4,
+      "masse": 79,
+      "taille": 154,
+      "chaussure": 125,
+      "vmoyenne": 19,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 5,
+      "masse": 79,
+      "taille": 134,
+      "chaussure": 299,
+      "vmoyenne": 12,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 6,
+      "masse": 70,
+      "taille": 184,
+      "chaussure": 295,
+      "vmoyenne": 19,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 7,
+      "masse": 93,
+      "taille": 194,
+      "chaussure": 272,
+      "vmoyenne": 20,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 8,
+      "masse": 74,
+      "taille": 140,
+      "chaussure": 239,
+      "vmoyenne": 11,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 9,
+      "masse": 114,
+      "taille": 138,
+      "chaussure": 166,
+      "vmoyenne": 12,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 10,
+      "masse": 60,
+      "taille": 147,
+      "chaussure": 180,
+      "vmoyenne": 19,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 11,
+      "masse": 55,
+      "taille": 192,
+      "chaussure": 284,
+      "vmoyenne": 16,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 12,
+      "masse": 118,
+      "taille": 175,
+      "chaussure": 249,
+      "vmoyenne": 13,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 13,
+      "masse": 98,
+      "taille": 155,
+      "chaussure": 126,
+      "vmoyenne": 17,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 14,
+      "masse": 105,
+      "taille": 146,
+      "chaussure": 297,
+      "vmoyenne": 8,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 15,
+      "masse": 103,
+      "taille": 177,
+      "chaussure": 146,
+      "vmoyenne": 14,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 16,
+      "masse": 86,
+      "taille": 163,
+      "chaussure": 261,
+      "vmoyenne": 17,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 17,
+      "masse": 81,
+      "taille": 188,
+      "chaussure": 231,
+      "vmoyenne": 11,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 18,
+      "masse": 58,
+      "taille": 187,
+      "chaussure": 262,
+      "vmoyenne": 20,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 19,
+      "masse": 87,
+      "taille": 152,
+      "chaussure": 147,
+      "vmoyenne": 9,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 20,
+      "masse": 104,
+      "taille": 162,
+      "chaussure": 227,
+      "vmoyenne": 7,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 21,
+      "masse": 113,
+      "taille": 159,
+      "chaussure": 204,
+      "vmoyenne": 14,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 22,
+      "masse": 81,
+      "taille": 174,
+      "chaussure": 160,
+      "vmoyenne": 8,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 23,
+      "masse": 52,
+      "taille": 139,
+      "chaussure": 212,
+      "vmoyenne": 16,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 24,
+      "masse": 77,
+      "taille": 135,
+      "chaussure": 175,
+      "vmoyenne": 14,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 25,
+      "masse": 58,
+      "taille": 197,
+      "chaussure": 263,
+      "vmoyenne": 11,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 26,
+      "masse": 51,
+      "taille": 190,
+      "chaussure": 137,
+      "vmoyenne": 14,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 27,
+      "masse": 70,
+      "taille": 183,
+      "chaussure": 269,
+      "vmoyenne": 18,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 28,
+      "masse": 71,
+      "taille": 196,
+      "chaussure": 122,
+      "vmoyenne": 20,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 29,
+      "masse": 107,
+      "taille": 141,
+      "chaussure": 238,
+      "vmoyenne": 8,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 30,
+      "masse": 59,
+      "taille": 198,
+      "chaussure": 196,
+      "vmoyenne": 19,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 31,
+      "masse": 120,
+      "taille": 161,
+      "chaussure": 300,
+      "vmoyenne": 20,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 32,
+      "masse": 116,
+      "taille": 160,
+      "chaussure": 174,
+      "vmoyenne": 13,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 33,
+      "masse": 105,
+      "taille": 199,
+      "chaussure": 254,
+      "vmoyenne": 11,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 34,
+      "masse": 60,
+      "taille": 170,
+      "chaussure": 214,
+      "vmoyenne": 14,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 35,
+      "masse": 112,
+      "taille": 149,
+      "chaussure": 168,
+      "vmoyenne": 11,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 36,
+      "masse": 94,
+      "taille": 152,
+      "chaussure": 134,
+      "vmoyenne": 10,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 37,
+      "masse": 73,
+      "taille": 167,
+      "chaussure": 289,
+      "vmoyenne": 17,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 38,
+      "masse": 52,
+      "taille": 177,
+      "chaussure": 239,
+      "vmoyenne": 13,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 39,
+      "masse": 79,
+      "taille": 130,
+      "chaussure": 101,
+      "vmoyenne": 8,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 40,
+      "masse": 94,
+      "taille": 162,
+      "chaussure": 229,
+      "vmoyenne": 17,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 41,
+      "masse": 95,
+      "taille": 189,
+      "chaussure": 199,
+      "vmoyenne": 11,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 42,
+      "masse": 48,
+      "taille": 179,
+      "chaussure": 289,
+      "vmoyenne": 7,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 43,
+      "masse": 45,
+      "taille": 193,
+      "chaussure": 164,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 44,
+      "masse": 72,
+      "taille": 152,
+      "chaussure": 270,
+      "vmoyenne": 15,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 45,
+      "masse": 51,
+      "taille": 148,
+      "chaussure": 237,
+      "vmoyenne": 14,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 46,
+      "masse": 107,
+      "taille": 145,
+      "chaussure": 223,
+      "vmoyenne": 19,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 47,
+      "masse": 99,
+      "taille": 186,
+      "chaussure": 153,
+      "vmoyenne": 18,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 48,
+      "masse": 59,
+      "taille": 152,
+      "chaussure": 155,
+      "vmoyenne": 20,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 49,
+      "masse": 75,
+      "taille": 192,
+      "chaussure": 273,
+      "vmoyenne": 9,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 50,
+      "masse": 112,
+      "taille": 162,
+      "chaussure": 155,
+      "vmoyenne": 10,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 51,
+      "masse": 85,
+      "taille": 190,
+      "chaussure": 215,
+      "vmoyenne": 18,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 52,
+      "masse": 100,
+      "taille": 181,
+      "chaussure": 235,
+      "vmoyenne": 8,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 53,
+      "masse": 117,
+      "taille": 169,
+      "chaussure": 286,
+      "vmoyenne": 16,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 54,
+      "masse": 72,
+      "taille": 135,
+      "chaussure": 131,
+      "vmoyenne": 7,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 55,
+      "masse": 115,
+      "taille": 145,
+      "chaussure": 297,
+      "vmoyenne": 11,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 56,
+      "masse": 89,
+      "taille": 190,
+      "chaussure": 101,
+      "vmoyenne": 8,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 57,
+      "masse": 86,
+      "taille": 192,
+      "chaussure": 133,
+      "vmoyenne": 18,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 58,
+      "masse": 98,
+      "taille": 183,
+      "chaussure": 258,
+      "vmoyenne": 9,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 59,
+      "masse": 120,
+      "taille": 182,
+      "chaussure": 140,
+      "vmoyenne": 13,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 60,
+      "masse": 116,
+      "taille": 149,
+      "chaussure": 290,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 61,
+      "masse": 73,
+      "taille": 194,
+      "chaussure": 250,
+      "vmoyenne": 11,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 62,
+      "masse": 57,
+      "taille": 180,
+      "chaussure": 211,
+      "vmoyenne": 19,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 63,
+      "masse": 60,
+      "taille": 182,
+      "chaussure": 240,
+      "vmoyenne": 11,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 64,
+      "masse": 57,
+      "taille": 137,
+      "chaussure": 194,
+      "vmoyenne": 19,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 65,
+      "masse": 91,
+      "taille": 182,
+      "chaussure": 256,
+      "vmoyenne": 10,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 66,
+      "masse": 89,
+      "taille": 138,
+      "chaussure": 183,
+      "vmoyenne": 7,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 67,
+      "masse": 47,
+      "taille": 183,
+      "chaussure": 272,
+      "vmoyenne": 19,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 68,
+      "masse": 54,
+      "taille": 196,
+      "chaussure": 221,
+      "vmoyenne": 15,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 69,
+      "masse": 72,
+      "taille": 153,
+      "chaussure": 141,
+      "vmoyenne": 13,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 70,
+      "masse": 92,
+      "taille": 186,
+      "chaussure": 193,
+      "vmoyenne": 16,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 71,
+      "masse": 70,
+      "taille": 150,
+      "chaussure": 114,
+      "vmoyenne": 9,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 72,
+      "masse": 56,
+      "taille": 197,
+      "chaussure": 272,
+      "vmoyenne": 17,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 73,
+      "masse": 82,
+      "taille": 184,
+      "chaussure": 119,
+      "vmoyenne": 18,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 74,
+      "masse": 100,
+      "taille": 135,
+      "chaussure": 286,
+      "vmoyenne": 13,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 75,
+      "masse": 50,
+      "taille": 133,
+      "chaussure": 211,
+      "vmoyenne": 8,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 76,
+      "masse": 111,
+      "taille": 159,
+      "chaussure": 222,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 77,
+      "masse": 75,
+      "taille": 132,
+      "chaussure": 188,
+      "vmoyenne": 16,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 78,
+      "masse": 94,
+      "taille": 162,
+      "chaussure": 284,
+      "vmoyenne": 12,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 79,
+      "masse": 104,
+      "taille": 144,
+      "chaussure": 210,
+      "vmoyenne": 16,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 80,
+      "masse": 104,
+      "taille": 170,
+      "chaussure": 213,
+      "vmoyenne": 8,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 81,
+      "masse": 46,
+      "taille": 167,
+      "chaussure": 197,
+      "vmoyenne": 10,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 82,
+      "masse": 70,
+      "taille": 136,
+      "chaussure": 233,
+      "vmoyenne": 11,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 83,
+      "masse": 57,
+      "taille": 145,
+      "chaussure": 135,
+      "vmoyenne": 14,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 84,
+      "masse": 100,
+      "taille": 177,
+      "chaussure": 283,
+      "vmoyenne": 14,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 85,
+      "masse": 63,
+      "taille": 163,
+      "chaussure": 277,
+      "vmoyenne": 9,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 86,
+      "masse": 114,
+      "taille": 140,
+      "chaussure": 218,
+      "vmoyenne": 19,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 87,
+      "masse": 58,
+      "taille": 157,
+      "chaussure": 144,
+      "vmoyenne": 9,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 88,
+      "masse": 99,
+      "taille": 166,
+      "chaussure": 185,
+      "vmoyenne": 18,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 89,
+      "masse": 73,
+      "taille": 154,
+      "chaussure": 279,
+      "vmoyenne": 10,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 90,
+      "masse": 118,
+      "taille": 200,
+      "chaussure": 244,
+      "vmoyenne": 14,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 91,
+      "masse": 117,
+      "taille": 187,
+      "chaussure": 152,
+      "vmoyenne": 10,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 92,
+      "masse": 52,
+      "taille": 140,
+      "chaussure": 188,
+      "vmoyenne": 8,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 93,
+      "masse": 85,
+      "taille": 149,
+      "chaussure": 298,
+      "vmoyenne": 14,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 94,
+      "masse": 109,
+      "taille": 159,
+      "chaussure": 184,
+      "vmoyenne": 16,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 95,
+      "masse": 45,
+      "taille": 132,
+      "chaussure": 236,
+      "vmoyenne": 16,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 96,
+      "masse": 49,
+      "taille": 140,
+      "chaussure": 121,
+      "vmoyenne": 9,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 97,
+      "masse": 108,
+      "taille": 198,
+      "chaussure": 258,
+      "vmoyenne": 7,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 98,
+      "masse": 76,
+      "taille": 188,
+      "chaussure": 277,
+      "vmoyenne": 9,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 99,
+      "masse": 105,
+      "taille": 198,
+      "chaussure": 294,
+      "vmoyenne": 10,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 100,
+      "masse": 81,
+      "taille": 153,
+      "chaussure": 150,
+      "vmoyenne": 17,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 101,
+      "masse": 50,
+      "taille": 162,
+      "chaussure": 205,
+      "vmoyenne": 19,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 102,
+      "masse": 61,
+      "taille": 193,
+      "chaussure": 166,
+      "vmoyenne": 8,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 103,
+      "masse": 96,
+      "taille": 171,
+      "chaussure": 118,
+      "vmoyenne": 15,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 104,
+      "masse": 52,
+      "taille": 132,
+      "chaussure": 256,
+      "vmoyenne": 12,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 105,
+      "masse": 96,
+      "taille": 173,
+      "chaussure": 246,
+      "vmoyenne": 19,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 106,
+      "masse": 51,
+      "taille": 150,
+      "chaussure": 122,
+      "vmoyenne": 11,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 107,
+      "masse": 68,
+      "taille": 155,
+      "chaussure": 122,
+      "vmoyenne": 19,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 108,
+      "masse": 58,
+      "taille": 143,
+      "chaussure": 296,
+      "vmoyenne": 19,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 109,
+      "masse": 102,
+      "taille": 176,
+      "chaussure": 131,
+      "vmoyenne": 17,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 110,
+      "masse": 105,
+      "taille": 135,
+      "chaussure": 181,
+      "vmoyenne": 17,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 111,
+      "masse": 85,
+      "taille": 132,
+      "chaussure": 294,
+      "vmoyenne": 12,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 112,
+      "masse": 48,
+      "taille": 132,
+      "chaussure": 276,
+      "vmoyenne": 10,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 113,
+      "masse": 45,
+      "taille": 166,
+      "chaussure": 212,
+      "vmoyenne": 19,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 114,
+      "masse": 45,
+      "taille": 184,
+      "chaussure": 221,
+      "vmoyenne": 10,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 115,
+      "masse": 94,
+      "taille": 181,
+      "chaussure": 127,
+      "vmoyenne": 11,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 116,
+      "masse": 66,
+      "taille": 149,
+      "chaussure": 274,
+      "vmoyenne": 17,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 117,
+      "masse": 71,
+      "taille": 184,
+      "chaussure": 145,
+      "vmoyenne": 9,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 118,
+      "masse": 118,
+      "taille": 136,
+      "chaussure": 160,
+      "vmoyenne": 15,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 119,
+      "masse": 111,
+      "taille": 175,
+      "chaussure": 183,
+      "vmoyenne": 16,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 120,
+      "masse": 113,
+      "taille": 186,
+      "chaussure": 243,
+      "vmoyenne": 11,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 121,
+      "masse": 116,
+      "taille": 169,
+      "chaussure": 105,
+      "vmoyenne": 17,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 122,
+      "masse": 120,
+      "taille": 188,
+      "chaussure": 117,
+      "vmoyenne": 18,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 123,
+      "masse": 95,
+      "taille": 155,
+      "chaussure": 146,
+      "vmoyenne": 20,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 124,
+      "masse": 104,
+      "taille": 143,
+      "chaussure": 221,
+      "vmoyenne": 12,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 125,
+      "masse": 80,
+      "taille": 160,
+      "chaussure": 283,
+      "vmoyenne": 8,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 126,
+      "masse": 96,
+      "taille": 155,
+      "chaussure": 186,
+      "vmoyenne": 17,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 127,
+      "masse": 59,
+      "taille": 182,
+      "chaussure": 148,
+      "vmoyenne": 16,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 128,
+      "masse": 90,
+      "taille": 156,
+      "chaussure": 250,
+      "vmoyenne": 19,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 129,
+      "masse": 59,
+      "taille": 178,
+      "chaussure": 269,
+      "vmoyenne": 11,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 130,
+      "masse": 117,
+      "taille": 142,
+      "chaussure": 232,
+      "vmoyenne": 9,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 131,
+      "masse": 54,
+      "taille": 196,
+      "chaussure": 162,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 132,
+      "masse": 90,
+      "taille": 154,
+      "chaussure": 128,
+      "vmoyenne": 12,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 133,
+      "masse": 58,
+      "taille": 196,
+      "chaussure": 238,
+      "vmoyenne": 11,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 134,
+      "masse": 87,
+      "taille": 133,
+      "chaussure": 249,
+      "vmoyenne": 15,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 135,
+      "masse": 65,
+      "taille": 155,
+      "chaussure": 131,
+      "vmoyenne": 14,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 136,
+      "masse": 96,
+      "taille": 190,
+      "chaussure": 180,
+      "vmoyenne": 11,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 137,
+      "masse": 68,
+      "taille": 178,
+      "chaussure": 114,
+      "vmoyenne": 20,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 138,
+      "masse": 103,
+      "taille": 160,
+      "chaussure": 250,
+      "vmoyenne": 17,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 139,
+      "masse": 104,
+      "taille": 165,
+      "chaussure": 223,
+      "vmoyenne": 20,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 140,
+      "masse": 86,
+      "taille": 140,
+      "chaussure": 246,
+      "vmoyenne": 19,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 141,
+      "masse": 109,
+      "taille": 144,
+      "chaussure": 165,
+      "vmoyenne": 20,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 142,
+      "masse": 83,
+      "taille": 140,
+      "chaussure": 141,
+      "vmoyenne": 7,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 143,
+      "masse": 60,
+      "taille": 181,
+      "chaussure": 262,
+      "vmoyenne": 15,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 144,
+      "masse": 102,
+      "taille": 182,
+      "chaussure": 255,
+      "vmoyenne": 7,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 145,
+      "masse": 69,
+      "taille": 148,
+      "chaussure": 164,
+      "vmoyenne": 16,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 146,
+      "masse": 66,
+      "taille": 148,
+      "chaussure": 208,
+      "vmoyenne": 13,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 147,
+      "masse": 98,
+      "taille": 141,
+      "chaussure": 139,
+      "vmoyenne": 20,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 148,
+      "masse": 120,
+      "taille": 151,
+      "chaussure": 209,
+      "vmoyenne": 20,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 149,
+      "masse": 105,
+      "taille": 177,
+      "chaussure": 235,
+      "vmoyenne": 20,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 150,
+      "masse": 48,
+      "taille": 188,
+      "chaussure": 158,
+      "vmoyenne": 13,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 151,
+      "masse": 82,
+      "taille": 166,
+      "chaussure": 120,
+      "vmoyenne": 15,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 152,
+      "masse": 94,
+      "taille": 142,
+      "chaussure": 124,
+      "vmoyenne": 20,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 153,
+      "masse": 55,
+      "taille": 161,
+      "chaussure": 233,
+      "vmoyenne": 12,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 154,
+      "masse": 62,
+      "taille": 143,
+      "chaussure": 229,
+      "vmoyenne": 9,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 155,
+      "masse": 64,
+      "taille": 145,
+      "chaussure": 103,
+      "vmoyenne": 12,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 156,
+      "masse": 108,
+      "taille": 155,
+      "chaussure": 150,
+      "vmoyenne": 14,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 157,
+      "masse": 110,
+      "taille": 171,
+      "chaussure": 161,
+      "vmoyenne": 12,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 158,
+      "masse": 58,
+      "taille": 134,
+      "chaussure": 142,
+      "vmoyenne": 15,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 159,
+      "masse": 115,
+      "taille": 194,
+      "chaussure": 143,
+      "vmoyenne": 10,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 160,
+      "masse": 119,
+      "taille": 150,
+      "chaussure": 206,
+      "vmoyenne": 10,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 161,
+      "masse": 109,
+      "taille": 149,
+      "chaussure": 262,
+      "vmoyenne": 18,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 162,
+      "masse": 51,
+      "taille": 182,
+      "chaussure": 172,
+      "vmoyenne": 19,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 163,
+      "masse": 91,
+      "taille": 161,
+      "chaussure": 270,
+      "vmoyenne": 13,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 164,
+      "masse": 88,
+      "taille": 198,
+      "chaussure": 119,
+      "vmoyenne": 18,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 165,
+      "masse": 117,
+      "taille": 182,
+      "chaussure": 300,
+      "vmoyenne": 12,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 166,
+      "masse": 112,
+      "taille": 181,
+      "chaussure": 132,
+      "vmoyenne": 10,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 167,
+      "masse": 48,
+      "taille": 164,
+      "chaussure": 167,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 168,
+      "masse": 81,
+      "taille": 188,
+      "chaussure": 116,
+      "vmoyenne": 12,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 169,
+      "masse": 116,
+      "taille": 138,
+      "chaussure": 288,
+      "vmoyenne": 18,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 170,
+      "masse": 58,
+      "taille": 145,
+      "chaussure": 209,
+      "vmoyenne": 8,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 171,
+      "masse": 58,
+      "taille": 137,
+      "chaussure": 219,
+      "vmoyenne": 9,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 172,
+      "masse": 118,
+      "taille": 154,
+      "chaussure": 290,
+      "vmoyenne": 14,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 173,
+      "masse": 113,
+      "taille": 161,
+      "chaussure": 271,
+      "vmoyenne": 12,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 174,
+      "masse": 117,
+      "taille": 136,
+      "chaussure": 239,
+      "vmoyenne": 7,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 175,
+      "masse": 90,
+      "taille": 168,
+      "chaussure": 215,
+      "vmoyenne": 8,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 176,
+      "masse": 71,
+      "taille": 148,
+      "chaussure": 202,
+      "vmoyenne": 16,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 177,
+      "masse": 87,
+      "taille": 180,
+      "chaussure": 273,
+      "vmoyenne": 16,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 178,
+      "masse": 67,
+      "taille": 198,
+      "chaussure": 104,
+      "vmoyenne": 11,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 179,
+      "masse": 52,
+      "taille": 131,
+      "chaussure": 105,
+      "vmoyenne": 13,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 180,
+      "masse": 45,
+      "taille": 168,
+      "chaussure": 179,
+      "vmoyenne": 18,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 181,
+      "masse": 105,
+      "taille": 154,
+      "chaussure": 161,
+      "vmoyenne": 16,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 182,
+      "masse": 93,
+      "taille": 186,
+      "chaussure": 294,
+      "vmoyenne": 15,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 183,
+      "masse": 93,
+      "taille": 188,
+      "chaussure": 270,
+      "vmoyenne": 19,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 184,
+      "masse": 55,
+      "taille": 175,
+      "chaussure": 147,
+      "vmoyenne": 8,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 185,
+      "masse": 97,
+      "taille": 161,
+      "chaussure": 217,
+      "vmoyenne": 14,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 186,
+      "masse": 106,
+      "taille": 189,
+      "chaussure": 290,
+      "vmoyenne": 12,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 187,
+      "masse": 92,
+      "taille": 192,
+      "chaussure": 203,
+      "vmoyenne": 18,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 188,
+      "masse": 75,
+      "taille": 182,
+      "chaussure": 267,
+      "vmoyenne": 16,
+      "sprep": 9
+    },
+    {
+      "nom": "Jack",
+      "dossard": 189,
+      "masse": 58,
+      "taille": 142,
+      "chaussure": 120,
+      "vmoyenne": 15,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 190,
+      "masse": 118,
+      "taille": 145,
+      "chaussure": 247,
+      "vmoyenne": 7,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 191,
+      "masse": 79,
+      "taille": 175,
+      "chaussure": 294,
+      "vmoyenne": 9,
+      "sprep": 15
+    },
+    {
+      "nom": "Jack",
+      "dossard": 192,
+      "masse": 102,
+      "taille": 140,
+      "chaussure": 124,
+      "vmoyenne": 7,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 193,
+      "masse": 116,
+      "taille": 171,
+      "chaussure": 201,
+      "vmoyenne": 18,
+      "sprep": 13
+    },
+    {
+      "nom": "Jack",
+      "dossard": 194,
+      "masse": 114,
+      "taille": 134,
+      "chaussure": 190,
+      "vmoyenne": 20,
+      "sprep": 16
+    },
+    {
+      "nom": "Jack",
+      "dossard": 195,
+      "masse": 70,
+      "taille": 148,
+      "chaussure": 216,
+      "vmoyenne": 19,
+      "sprep": 12
+    },
+    {
+      "nom": "Jack",
+      "dossard": 196,
+      "masse": 107,
+      "taille": 196,
+      "chaussure": 299,
+      "vmoyenne": 11,
+      "sprep": 11
+    },
+    {
+      "nom": "Jack",
+      "dossard": 197,
+      "masse": 117,
+      "taille": 134,
+      "chaussure": 132,
+      "vmoyenne": 12,
+      "sprep": 10
+    },
+    {
+      "nom": "Jack",
+      "dossard": 198,
+      "masse": 75,
+      "taille": 143,
+      "chaussure": 193,
+      "vmoyenne": 8,
+      "sprep": 14
+    },
+    {
+      "nom": "Jack",
+      "dossard": 199,
+      "masse": 87,
+      "taille": 169,
+      "chaussure": 289,
+      "vmoyenne": 8,
+      "sprep": 8
+    },
+    {
+      "nom": "Jack",
+      "dossard": 200,
+      "masse": 120,
+      "taille": 200,
+      "chaussure": 300,
+      "vmoyenne": 20,
+      "sprep": 16
+    }
+  ]
+}
