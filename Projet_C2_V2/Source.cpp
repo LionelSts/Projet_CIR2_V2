@@ -2,6 +2,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include <iostream>
+#include <time.h>    
 #include "jsoncpp-master\include\json\value.h""
 #include "jsoncpp-master\include\json\json.h"
 #include "simu.h"
@@ -40,15 +41,29 @@ private:
 class circuit {
 public:
 	int vent() {};
-
+	bool checkpoint(int position_actu) {
+		if (position_actu % 5 == 1) {
+			return true;
+		}
+		return false;
+	}
 private:
 	float longeur = 42.195;
-
+	int ravitaillement = 5;
 };
+
+class denivele {
+public:
+	float pente = rand() % 20 + 1;
+	float distance = rand() % 4 + 1;
+};
+
+
 
 
 int main()
 {
+	srand(time(NULL));
 	coureur a;
 	RenderWindow window(VideoMode(1300, 700), "Simulation");
 	Event f;
@@ -81,9 +96,9 @@ int main()
 
 		}
 	}
-	cout << a.vitesse() << endl;
+	cout << a.vitesse() << endl;/*
 	ifstream people_file("json/coureurs.json", ifstream::binary);
 	people_file >> coureurs;
-
-	cout << coureurs; //This will print the entire json object.
+	
+	cout << coureurs; //This will print the entire json object.*/
 }
