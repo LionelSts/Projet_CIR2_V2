@@ -2,18 +2,19 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include <iostream>
+#include <fstream>
 #include <time.h>    
-#include "jsoncpp-master\include\json\value.h""
-#include "jsoncpp-master\include\json\json.h"
+#include "json-develop\include\nlohmann\json_fwd.hpp"
 #include "simu.h"
 #include "json/coureurs.json"
 
 using namespace std;
 using namespace sf;
+using json = nlohmann::json;
 
 class coureur {
 public:
-	float vitesse() {
+	double vitesse() {
 		if (distance_parcouru < (42.195 / 2 * (1 + (semaine_prep - 8) / 8))) {
 			if (((hydratation / (0.5 * temps_course)) < 0.8)) {
 				return (vitesse_moyenne * (poids_chaussure / 100 * (98.9 / 100)) * (((1 / 0.6)* (1 / (hydratation/(0.5*temps_course))))*0.99));
@@ -28,14 +29,35 @@ public:
 		
 	}
 private:
-	int masse = 45;
-	int taille = 130;
-	int poids_chaussure = 100;
-	int vitesse_moyenne = 7;
-	int semaine_prep = 8;
-	float hydratation = 1;
-	float distance_parcouru = 0;
-	float temps_course = 3;
+	int masse;
+	int taille;
+	int poids_chaussure;
+	int vitesse_moyenne;
+	int semaine_prep;
+	float hydratation;
+	float distance_parcouru;
+	float temps_course;
+
+coureur() {
+	masse = 45;
+	taille = 130;
+	poids_chaussure = 100;
+	vitesse_moyenne = 7;
+	semaine_prep = 8;
+	hydratation = 1;
+	distance_parcouru = 0;
+	temps_course = 3;
+};
+coureur(int num) {
+	masse = 45;
+	taille = 130;
+	poids_chaussure = 100;
+	vitesse_moyenne = 7;
+	semaine_prep = 8;
+	hydratation = 1;
+	distance_parcouru = 0;
+	temps_course = 3;
+};
 };
 
 class circuit {
@@ -48,14 +70,35 @@ public:
 		return false;
 	}
 private:
-	float longeur = 42.195;
-	int ravitaillement = 5;
+	float longueur;
+	int ravitaillement;
+
+circuit() {
+	longueur = 42.195;
+	ravitaillement = 5;
+}
 };
 
 class denivele {
-public:
-	float pente = rand() % 20 + 1;
-	float distance = rand() % 4 + 1;
+private:
+	float pente;
+	float distance;
+
+denivele() {
+	pente = rand() % 20;
+	distance = rand() % 4 + 1;
+}
+};
+
+class vent {
+private:
+	float vitesse;
+	float distance;
+
+vent(){
+	vitesse = rand() % 80;
+	distance = rand() % 2 + 1;
+};
 };
 
 
@@ -64,7 +107,7 @@ public:
 int main()
 {
 	srand(time(NULL));
-	coureur a;
+	// coureur a;
 	RenderWindow window(VideoMode(1300, 700), "Simulation");
 	Event f;
 	Text text;
@@ -96,9 +139,4 @@ int main()
 
 		}
 	}
-	cout << a.vitesse() << endl;/*
-	ifstream people_file("json/coureurs.json", ifstream::binary);
-	people_file >> coureurs;
-	
-	cout << coureurs; //This will print the entire json object.*/
-}
+	// cout << a.vitesse() << endl;
