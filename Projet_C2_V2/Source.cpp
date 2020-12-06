@@ -4,13 +4,10 @@
 #include <iostream>
 #include <fstream>
 #include <time.h>    
-#include "json-develop\include\nlohmann\json_fwd.hpp"
 #include "simu.h"
-#include "json/coureurs.json"
 
 using namespace std;
 using namespace sf;
-using json = nlohmann::json;
 
 class coureur {
 public:
@@ -39,21 +36,11 @@ private:
 	float temps_course;
 
 coureur() {
-	masse = 45;
-	taille = 130;
-	poids_chaussure = 100;
-	vitesse_moyenne = 7;
-	semaine_prep = 8;
-	hydratation = 1;
-	distance_parcouru = 0;
-	temps_course = 3;
-};
-coureur(int num) {
-	masse = 45;
-	taille = 130;
-	poids_chaussure = 100;
-	vitesse_moyenne = 7;
-	semaine_prep = 8;
+	masse = rand() % 75 +45;
+	taille = rand() % 70 + 130;
+	poids_chaussure = rand() % 200 + 100;
+	vitesse_moyenne = rand() % 13 + 7;
+	semaine_prep = rand() % 8 + 8;
 	hydratation = 1;
 	distance_parcouru = 0;
 	temps_course = 3;
@@ -70,7 +57,7 @@ public:
 		return false;
 	}
 private:
-	float longueur;
+	double longueur;
 	int ravitaillement;
 
 circuit() {
@@ -81,8 +68,8 @@ circuit() {
 
 class denivele {
 private:
-	float pente;
-	float distance;
+	int pente;
+	int distance;
 
 denivele() {
 	pente = rand() % 20;
@@ -92,8 +79,8 @@ denivele() {
 
 class vent {
 private:
-	float vitesse;
-	float distance;
+	int vitesse;
+	int distance;
 
 vent(){
 	vitesse = rand() % 80;
@@ -104,8 +91,7 @@ vent(){
 
 
 
-int main()
-{
+int main() {
 	srand(time(NULL));
 	// coureur a;
 	RenderWindow window(VideoMode(1300, 700), "Simulation");
@@ -129,7 +115,7 @@ int main()
 			text.setString("Démarage d'une simulation");
 			rectangle.setPosition(400, 100);
 			i++;
-			rectangle.setSize(sf::Vector2f(i%700, 100));
+			rectangle.setSize(sf::Vector2f(i % 700, 100));
 			if (f.type == Event::Closed) {
 				window.close();
 			}
@@ -140,3 +126,4 @@ int main()
 		}
 	}
 	// cout << a.vitesse() << endl;
+}
