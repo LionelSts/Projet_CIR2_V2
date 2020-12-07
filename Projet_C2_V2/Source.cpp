@@ -54,24 +54,44 @@ class coureur {
 public:
 	// calcul de la vitesse du coureur en temps normal
 	double vitesse() {
-		double vitesse = (vitesse_moyenne * (poids_chaussure / 100 * (98.9 / 100)));
+		double vitesse = (vitesse_moyenne * (poids_chaussure / 100 * (98.9 / 100))); // on initialise la vitesse du coureur
 		if (distance_parcouru < (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8))) {
-			if (((hydratation / (0.5 * temps_course)) < 0.8)) {
+			if (((hydratation / (0.5 * temps_course)) < 0.9)) {
 				
-				return  vitesse*(100-(((1 / 0.6)* (1 / (hydratation/(0.5*temps_course))))*0.01));
+				return  vitesse * (1 - ((2 * (1 / (hydratation / (0.5 * temps_course)))) * 0.01)); // on applique un problème d'hydratation au coureurs
 			}
 			return vitesse;
 		}
 		
-		if ((hydratation / (0.5 * temps_course)) < 0.8) {
+		if ((hydratation / (0.5 * temps_course)) < 0.9) {
 			
-			vitesse = vitesse * (100 - (((1 / 0.6) * (1 / (hydratation / (0.5 * temps_course)))) * 0.01));
-			vitesse -= (((0.2 * (distance_parcouru - (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) / (42.195 - (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) * vitesse);
+			vitesse = vitesse * (1 - ((2 * (1 / (hydratation / (0.5 * temps_course)))) * 0.01)); // on applique un problème d'hydratation au coureurs
+			vitesse -= (((0.2 * (distance_parcouru - (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) / (42.195 - (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) * vitesse); // on applique la fatigue 
 			return vitesse;
 		}
-		vitesse -= (((02 * (distance_parcouru -(42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) / (42.195-(42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) * vitesse);
+		vitesse -= (((02 * (distance_parcouru -(42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) / (42.195-(42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8)))) * vitesse); // on applique la fatigue 
 		return vitesse;
-		
+	}
+
+	// fonction qui vérifie l'etat du coureurs : renvoie 1 si il court, 0 si il a abandonné
+	int etat(){
+
+		// défini à quelle moment le coureur commence a etre dehydrate
+		if ((hydratation / (0.5 * temps_course)) < 0.4 && abandon==-3) {
+			abandon = distance_parcouru;
+		}
+
+		// le coureur a bus suffisament
+		if((hydratation / (0.5 * temps_course)) > 0.4){
+			abandon = -3;
+		}
+
+		// si la distance d'abandon est atteinte
+		if (abandon +2 == distance_parcouru) {
+			return 0;
+		}
+
+		return 1;
 	}
 
 	//initialisation aléatoire des caraéctéristiques du coureur
@@ -83,9 +103,10 @@ public:
 		poids_chaussure = rand() % 200 + 100;
 		vitesse_moyenne = rand() % 13 + 7;
 		semaine_prep = rand() % 8 + 8;
-		hydratation = 1;
+		hydratation = 0.5* vitesse_moyenne/5;
 		distance_parcouru = 0;
 		temps_course = 0.01;
+		abandon = -3;
 	};
 
 	int get_taille() {
@@ -105,10 +126,11 @@ private:
 	int taille;
 	int poids_chaussure;
 	int vitesse_moyenne;
-	long int semaine_prep;
-	float hydratation;
+	int semaine_prep;
+	double hydratation;
 	float distance_parcouru;
-	float temps_course;
+	double temps_course;
+	float abandon; // variable pour dire quand le coureurs va abandonner en cas de non hydratation
 
 };
 
@@ -146,11 +168,11 @@ public:
 		}
 	}
 	int get_vent(float distance) {
-		int indice = trunc(distance);
+		int indice = (int)trunc(distance);  // on ne garde que la borne kilometrique
 		return vent_map[indice];
 	}
 	int get_denivele(float distance) {
-		int indice = trunc(distance);
+		int indice = (int)trunc(distance); // on ne garde que la borne kilometrique
 		return denivele_map[indice];
 	}
 
