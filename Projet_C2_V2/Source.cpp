@@ -87,7 +87,7 @@ public:
 		}
 
 		// si la distance d'abandon est atteinte
-		if (abandon +2 == distance_parcouru) {
+		if (abandon +2 > distance_parcouru) {
 			return 0;
 		}
 
@@ -104,7 +104,7 @@ public:
 		vitesse_moyenne = rand() % 13 + 7;
 		semaine_prep = rand() % 8 + 8;
 		hydratation = 0.5* vitesse_moyenne/5;
-		distance_parcouru = 0;
+		distance_parcouru = (float)0.1;
 		temps_course = 0.01;
 		abandon = -3;
 	};
@@ -117,6 +117,23 @@ public:
 	}
 	float get_distance() {
 		return distance_parcouru;
+	}
+	void boire() {
+		hydratation+= (rand() % 50)/100;
+	}
+	int get_checkpoint_status() {
+		return checkpoint_pris;
+	}
+	void change_checkpoint_status(int status) {
+		checkpoint_pris = status;
+	}
+	void courir(float distance) {
+		distance_parcouru += distance;
+	}
+	void time_passe() {
+		if (distance_parcouru < 42.125) { // si le coureur a fini la course son temps ne passe plus
+			temps_course += (1 / 60);
+		}
 	}
 
 private:
@@ -131,13 +148,14 @@ private:
 	float distance_parcouru;
 	double temps_course;
 	float abandon; // variable pour dire quand le coureurs va abandonner en cas de non hydratation
+	int checkpoint_pris = 1; // sert à ne pas prendre plusieurs fois le même checkpoint
 
 };
 
 // définition du circuit grace à une classe
 class circuit {
 public:
-	// fonctino renvoyant si l'on est à un chekcpoint
+	// fonction renvoyant si l'on est à un chekcpoint
 	bool checkpoint(int position_actu) {
 		if (position_actu % 5 == 1) {
 			return true;
@@ -205,8 +223,52 @@ double vitesse_actuelle(coureur coureur, circuit map) {
 
 int main() {
 	srand(time(NULL));
+	// création des coureurs
+	vector <coureur> peloton;
 	coureur a(0);
+	peloton.push_back(a);
+	coureur b(1);
+	peloton.push_back(a);
+	coureur c(2);
+	peloton.push_back(a);
+	coureur d(3);
+	peloton.push_back(a);
+	coureur e(4);
+	peloton.push_back(a);
+	coureur g(5);
+	peloton.push_back(a);
+	coureur h(6);
+	peloton.push_back(a);
+	coureur j(7);
+	peloton.push_back(a);
+	coureur k(8);
+	peloton.push_back(a);
 	circuit circuit_actuel;
+	int course_fini = 0;
+	int duree = 0;
+	while (!course_fini || duree > 420) // répétion jusqu'a la fin de la course / jusqu'a time out (7 heures)
+	{
+		duree++;
+		int coureur_fini = 0;
+		for (int i = 0; i < 9; i++)// on le fait joueur par joueur
+		{
+			peloton[i].time_passe();
+			if (peloton[i].etat() || peloton[i].get_distance()<42.125) {
+				peloton[i].courir((float)vitesse_actuelle(peloton[i], circuit_actuel));
+				if (circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && !peloton[i].get_checkpoint_status()) {
+					peloton[i].change_checkpoint_status(1);
+					peloton[i].boire();
+				}
+			}
+			else {
+				coureur_fini++;
+			}
+		}
+		if (coureur_fini == 8) {
+			course_fini = 1;
+		}
+	}
+
 	RenderWindow window(VideoMode(1300, 700), "Simulation");
 	Event f;
 	Text text;
