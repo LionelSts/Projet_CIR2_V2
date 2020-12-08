@@ -54,7 +54,8 @@ class coureur {
 public:
 	// calcul de la vitesse du coureur en temps normal
 	double vitesse() {
-		double vitesse = (vitesse_moyenne * (poids_chaussure / 100 * (98.9 / 100))); // on initialise la vitesse du coureur
+		double vitesse = vitesse_moyenne;
+		vitesse-= ( vitesse*(poids_chaussure / 100 * 0.011)); // on initialise la vitesse du coureur en fonction du poids de ses chaussures
 		if (distance_parcouru < (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8))) {
 			if (((hydratation / (0.5 * temps_course)) < 0.9)) {
 				
@@ -176,17 +177,17 @@ public:
 		{
 			vent vent_rand; // initialisation des aléas climatique tous les 4 km
 			denivele denivele_rand; // initialisation des denivele tous les 4 km
-			for (int y = i; y <= vent_rand.get_distance(); y++)
+			for (int y = i; y-i <= vent_rand.get_distance()-1; y++)
 			{
 				vent_map[y] = vent_rand.get_vitesse();
 			}
-			for (int y = i; y <= denivele_rand.get_distance(); y++) {
+			for (int y = i; y - i <= denivele_rand.get_distance()-5; y++) {
 				denivele_map[y] = denivele_rand.get_pente();
 			}
 		}
 	}
 	int get_vent(float distance) {
-		int indice = (int)trunc(distance);  // on ne garde que la borne kilometrique
+		unsigned int indice = (int)trunc(distance);  // on ne garde que la borne kilometrique
 		return vent_map[indice];
 	}
 	int get_denivele(float distance) {
@@ -211,14 +212,14 @@ double vitesse_actuelle(coureur coureur, circuit map) {
 	double PTmax;
 	double PR;
 	// vitesse de course à l'aide de la puissance intrinsèque
-	PTmax = coureur.vitesse()*coureur.get_masse()*coureur.get_taille() + 0.5 * 1.225 * 0.137 * coureur.get_taille()*coureur.vitesse();
-	PR = PTmax - 0.5 * 1.225 * 0.137 * coureur.get_taille() * (coureur.vitesse() + pow(map.get_vent(coureur.get_distance()), 2)* coureur.vitesse());
+	PTmax = coureur.vitesse()*coureur.get_masse()*(coureur.get_taille()/100) + 0.5 * 1.225 * 0.137 * (coureur.get_taille()/100)*coureur.vitesse();
+	PR = PTmax - 0.5 * 1.225 * 0.137 * (coureur.get_taille()/100) * (coureur.vitesse() + pow(map.get_vent(coureur.get_distance()), 2)* coureur.vitesse());
 	vitesse = PR / (coureur.get_masse() * 0.98);
 	// vitesse de course après prise en compte de la pente
-	if (map.get_vent(coureur.get_distance())<0) {
-		return vitesse*(100+(map.get_vent(coureur.get_distance())/1.5*0.0035));
+	if (map.get_denivele(coureur.get_distance())<0) {
+		return vitesse*(100+(map.get_denivele(coureur.get_distance())/1.5*0.0035));
 	}
-	return vitesse * (100 - (map.get_vent(coureur.get_distance()) / 1.5 * 0.01));
+	return vitesse * (100 - (map.get_denivele(coureur.get_distance()) / 1.5 * 0.01));
 }
 
 int main() {
@@ -228,41 +229,47 @@ int main() {
 	coureur a(0);
 	peloton.push_back(a);
 	coureur b(1);
-	peloton.push_back(a);
+	peloton.push_back(b);
 	coureur c(2);
-	peloton.push_back(a);
+	peloton.push_back(c);
 	coureur d(3);
-	peloton.push_back(a);
+	peloton.push_back(d);
 	coureur e(4);
-	peloton.push_back(a);
+	peloton.push_back(e);
 	coureur g(5);
-	peloton.push_back(a);
+	peloton.push_back(g);
 	coureur h(6);
-	peloton.push_back(a);
+	peloton.push_back(h);
 	coureur j(7);
-	peloton.push_back(a);
+	peloton.push_back(j);
 	coureur k(8);
-	peloton.push_back(a);
+	peloton.push_back(k);
 	circuit circuit_actuel;
 	int course_fini = 0;
 	int duree = 0;
+	
 	while (!course_fini || duree > 420) // répétion jusqu'a la fin de la course / jusqu'a time out (7 heures)
 	{
 		duree++;
 		int coureur_fini = 0;
 		for (int i = 0; i < 9; i++)// on le fait joueur par joueur
 		{
-			peloton[i].time_passe();
+			peloton[i].time_passe();/*
 			if (peloton[i].etat() || peloton[i].get_distance()<42.125) {
 				peloton[i].courir((float)vitesse_actuelle(peloton[i], circuit_actuel));
-				if (circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && !peloton[i].get_checkpoint_status()) {
+				if (circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && !peloton[i].get_checkpoint_status()) { // si il est sur un kilometrage check point et qu'il ne l'a pas encore pris, il le prend
 					peloton[i].change_checkpoint_status(1);
 					peloton[i].boire();
+				}
+				if (!circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && peloton[i].get_checkpoint_status()==0) { // si il a pris le checkpint mais qu'il n'est pas sur un kilometrage à checkpoint, il peut reprendre le prochain
+					peloton[i].change_checkpoint_status(0);
 				}
 			}
 			else {
 				coureur_fini++;
-			}
+			}*/
+			peloton[i].courir((float)vitesse_actuelle(peloton[i], circuit_actuel));
+			cout << peloton[i].get_distance() << endl;
 		}
 		if (coureur_fini == 8) {
 			course_fini = 1;
