@@ -6,6 +6,7 @@
 #include <time.h>
 #include <vector>
 #include <cmath>
+#include<windows.h>
 #include "simu.h"
 
 using namespace std;
@@ -15,8 +16,8 @@ using namespace sf;
 class denivele {
 public:
 	denivele() {
-		pente = rand() % 40 -20;
-		distance = rand() % 4 + 1;
+		pente = (rand() % 40) -20;
+		distance = (rand() % 2) + 1;
 	}
 	int get_distance() {
 		return distance;
@@ -34,8 +35,8 @@ private:
 class vent {
 public:
 	vent() {
-		vitesse = rand() % 80;
-		distance = rand() % 2 + 1;
+		vitesse = rand() % 40;
+		distance = (rand() % 2) + 1;
 	}
 	int get_distance() {
 		return distance;
@@ -59,7 +60,7 @@ public:
 		if (distance_parcouru < (42.195 / 2 * (1 + ((double)semaine_prep - 8) / 8))) {
 			if (((hydratation / (0.5 * temps_course)) < 0.9)) {
 				
-				return  vitesse * (1 - ((2 * (1 / (hydratation / (0.5 * temps_course)))) * 0.01)); // on applique un problème d'hydratation au coureurs
+				return  (vitesse * (1 - ((2 * (1 / (hydratation / (0.5 * temps_course)))) * 0.01))); // on applique un problème d'hydratation au coureurs
 			}
 			return vitesse;
 		}
@@ -99,13 +100,13 @@ public:
 	coureur(int a) {
 		dossard = a;
 		nom = "Jack";
-		masse = rand() % 75 + 45;
-		taille = rand() % 70 + 130;
-		poids_chaussure = rand() % 200 + 100;
-		vitesse_moyenne = rand() % 13 + 7;
-		semaine_prep = rand() % 8 + 8;
+		masse = (rand() % 75) + 45;
+		taille = (rand() % 70) + 130;
+		poids_chaussure = (rand() % 200) + 100;
+		vitesse_moyenne = (rand() % 13) + 7.;
+		semaine_prep = (rand() % 8) + 8;
 		hydratation = 0.5* vitesse_moyenne/5;
-		distance_parcouru = (float)0.1;
+		distance_parcouru = 0.1;
 		temps_course = 0.01;
 		abandon = -3;
 	};
@@ -116,8 +117,14 @@ public:
 	int get_masse() {
 		return masse;
 	}
-	float get_distance() {
+	double get_distance() {
 		return distance_parcouru;
+	}
+	int get_id() {
+		return dossard;
+	}
+	double get_temps() {
+		return temps_course;
 	}
 	void boire() {
 		hydratation+= (rand() % 50)/100;
@@ -128,8 +135,8 @@ public:
 	void change_checkpoint_status(int status) {
 		checkpoint_pris = status;
 	}
-	void courir(float distance) {
-		distance_parcouru += distance;
+	void courir(double distance) {
+		distance_parcouru += (distance*3.6)/60;
 	}
 	void time_passe() {
 		if (distance_parcouru < 42.125) { // si le coureur a fini la course son temps ne passe plus
@@ -143,12 +150,12 @@ private:
 	int masse;
 	int taille;
 	int poids_chaussure;
-	int vitesse_moyenne;
+	double vitesse_moyenne;
 	int semaine_prep;
 	double hydratation;
-	float distance_parcouru;
+	double distance_parcouru;
 	double temps_course;
-	float abandon; // variable pour dire quand le coureurs va abandonner en cas de non hydratation
+	double abandon; // variable pour dire quand le coureurs va abandonner en cas de non hydratation
 	int checkpoint_pris = 1; // sert à ne pas prendre plusieurs fois le même checkpoint
 
 };
@@ -168,7 +175,7 @@ public:
 	circuit() {
 		longueur = 42.195;
 		ravitaillement = 5;
-		for (int i = 0; i < 42; i++)
+		for (int i = 0; i <= 42; i++)
 		{
 			denivele_map.push_back(0);
 			vent_map.push_back(0);
@@ -181,16 +188,16 @@ public:
 			{
 				vent_map[y] = vent_rand.get_vitesse();
 			}
-			for (int y = i; y - i <= denivele_rand.get_distance()-5; y++) {
+			for (int y = i; y - i <= denivele_rand.get_distance()-1; y++) {
 				denivele_map[y] = denivele_rand.get_pente();
 			}
 		}
 	}
-	int get_vent(float distance) {
+	int get_vent(double distance) {
 		unsigned int indice = (int)trunc(distance);  // on ne garde que la borne kilometrique
 		return vent_map[indice];
 	}
-	int get_denivele(float distance) {
+	int get_denivele(double distance) {
 		int indice = (int)trunc(distance); // on ne garde que la borne kilometrique
 		return denivele_map[indice];
 	}
@@ -198,8 +205,6 @@ public:
 private:
 	double longueur;
 	int ravitaillement;
-	// vector <vent> vent_map;
-	// vector <denivele> denivele_map;
 	vector <int> vent_map;
 	vector <int> denivele_map;
 
@@ -211,15 +216,17 @@ double vitesse_actuelle(coureur coureur, circuit map) {
 	double vitesse;
 	double PTmax;
 	double PR;
+	double Pa;
 	// vitesse de course à l'aide de la puissance intrinsèque
+	Pa = 0.5 * 1.205 * 0.137 * (coureur.get_taille()/100) * (coureur.vitesse() + pow(map.get_vent(coureur.get_distance()), 2)* coureur.vitesse());
 	PTmax = coureur.vitesse()*coureur.get_masse()*(coureur.get_taille()/100) + 0.5 * 1.225 * 0.137 * (coureur.get_taille()/100)*coureur.vitesse();
-	PR = PTmax - 0.5 * 1.225 * 0.137 * (coureur.get_taille()/100) * (coureur.vitesse() + pow(map.get_vent(coureur.get_distance()), 2)* coureur.vitesse());
+	PR = PTmax - Pa;
 	vitesse = PR / (coureur.get_masse() * 0.98);
 	// vitesse de course après prise en compte de la pente
 	if (map.get_denivele(coureur.get_distance())<0) {
-		return vitesse*(100+(map.get_denivele(coureur.get_distance())/1.5*0.0035));
+		return (vitesse*(1+(map.get_denivele(coureur.get_distance())/1.5*0.0035)));
 	}
-	return vitesse * (100 - (map.get_denivele(coureur.get_distance()) / 1.5 * 0.01));
+	return (vitesse * (1 - ((-map.get_denivele(coureur.get_distance())) / 1.5 * 0.01)));
 }
 
 int main() {
@@ -245,66 +252,113 @@ int main() {
 	coureur k(8);
 	peloton.push_back(k);
 	circuit circuit_actuel;
-	int course_fini = 0;
-	int duree = 0;
-	
-	while (!course_fini || duree > 420) // répétion jusqu'a la fin de la course / jusqu'a time out (7 heures)
-	{
-		duree++;
-		int coureur_fini = 0;
-		for (int i = 0; i < 9; i++)// on le fait joueur par joueur
-		{
-			peloton[i].time_passe();/*
-			if (peloton[i].etat() || peloton[i].get_distance()<42.125) {
-				peloton[i].courir((float)vitesse_actuelle(peloton[i], circuit_actuel));
-				if (circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && !peloton[i].get_checkpoint_status()) { // si il est sur un kilometrage check point et qu'il ne l'a pas encore pris, il le prend
-					peloton[i].change_checkpoint_status(1);
-					peloton[i].boire();
-				}
-				if (!circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && peloton[i].get_checkpoint_status()==0) { // si il a pris le checkpint mais qu'il n'est pas sur un kilometrage à checkpoint, il peut reprendre le prochain
-					peloton[i].change_checkpoint_status(0);
-				}
-			}
-			else {
-				coureur_fini++;
-			}*/
-			peloton[i].courir((float)vitesse_actuelle(peloton[i], circuit_actuel));
-			cout << peloton[i].get_distance() << endl;
-		}
-		if (coureur_fini == 8) {
-			course_fini = 1;
-		}
-	}
 
 	RenderWindow window(VideoMode(1300, 700), "Simulation");
 	Event f;
 	Text text;
 	Font font;
+	// création et chargement des textures
+	Texture t0, t1, t2, t3;
+	t0.loadFromFile("images/depart.png");
+	t1.loadFromFile("images/road.png");
+	t2.loadFromFile("images/vent.png");
+	t3.loadFromFile("images/coureur.png");
+	Sprite sprite0(t0);
+	Sprite sprite1(t1);
+	Sprite sprite2(t2);
+	Sprite sprite3(t3);
 	if (!font.loadFromFile("arial.ttf"))
 	{
 		cout << "impossible de charger la police d'ecriture" << endl;
 	}
 	text.setFont(font);
-	sf::RectangleShape rectangle(sf::Vector2f(1, 100));
-	int i = 0;
+	RectangleShape depart(sf::Vector2f(20, 20));
+
+	// génération et affichage de la carte
+
+	
+
+	// initialisation des conditions de fin
+	int course_fini = 0;
+	int duree = 0;
+
 	while (window.isOpen())
 	{
 		while (window.pollEvent(f))
 		{
-			window.clear();
-			text.setCharacterSize(30);
-			text.setPosition(0, 0);
-			text.setString("Démarage d'une simulation");
-			rectangle.setPosition(400, 100);
-			i++;
-			rectangle.setSize(sf::Vector2f(i % 700, 100));
+			
+			while (!course_fini || duree > 420) // répétion jusqu'a la fin de la course / jusqu'a time out (7 heures)
+			{
+				window.clear(Color(220, 220, 220));
+				duree++;
+				int coureur_fini = 0;
+				for (int i = 0; i < 9; i++)// on le fait joueur par joueur
+				{
+					if (i == 3) {
+						sprite3.setPosition((float)trunc(peloton[i].get_distance()*23+22), 40);
+					}
+					peloton[i].time_passe();
+					if (peloton[i].get_distance() > 0) {
+						if (peloton[i].etat() || peloton[i].get_distance() < 42.125) {
+							peloton[i].courir((double)vitesse_actuelle(peloton[i], circuit_actuel));
+							if (circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && !peloton[i].get_checkpoint_status()) { // si il est sur un kilometrage check point et qu'il ne l'a pas encore pris, il le prend
+								peloton[i].change_checkpoint_status(1);
+								peloton[i].boire();
+							}
+							if (!circuit_actuel.checkpoint((int)trunc(peloton[i].get_distance())) && peloton[i].get_checkpoint_status() == 0) { // si il a pris le checkpint mais qu'il n'est pas sur un kilometrage à checkpoint, il peut reprendre le prochain
+								peloton[i].change_checkpoint_status(0);
+							}
+						}
+						else {
+							coureur_fini++;
+						}
+					}
+					/*
+						cout << "Vitesse :" << vitesse_actuelle(peloton[i], circuit_actuel) * 3.6 << endl;
+						cout << "Distance :" << peloton[i].get_distance() << endl;
+						peloton[i].courir(vitesse_actuelle(peloton[i], circuit_actuel));*/
+				}
+				
+				text.setCharacterSize(30);
+				text.setPosition(0, 0);
+				text.setFillColor(Color::Black);
+				text.setString("Simulation en cours");
+				sprite0.setPosition(2 * 22, 50);
+				window.draw(sprite0);
+				for (double i = 3; i < 43; i++) {
+					if (circuit_actuel.get_vent(i - 2) != 0) {
+						sprite2.setPosition((float)(i * 22), 50);
+						window.draw(sprite2);
+					}
+					else
+					{
+						sprite1.setPosition((float)(i * 22), 50);
+						window.draw(sprite1);
+					}
+
+				}
+				sprite0.setPosition(43 * 22, 50);
+				window.draw(sprite0);
+				window.draw(text);
+				window.draw(depart);
+				window.draw(sprite3);
+				window.display();
+
+				if (coureur_fini == 8) {
+					course_fini = 1;
+				}
+				Sleep(250);
+				
+			}
 			if (f.type == Event::Closed) {
 				window.close();
 			}
-			window.draw(text);
-			window.draw(rectangle);
-			window.display();
+			for (int i = 0; i < 10; i++)
+			{
+				cout << "Le coureur " << peloton[i].get_id() << " a parcouru " << peloton[i].get_distance() << " en " << peloton[i].get_temps() << endl;
+			}
+			cout << a.vitesse() << endl;
 		}
 	}
-	cout << a.vitesse() << endl;
+	
 }
