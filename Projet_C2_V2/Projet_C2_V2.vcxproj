@@ -146,10 +146,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="circuit.cpp" />
+    <ClCompile Include="coureur.cpp" />
+    <ClCompile Include="denivele.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="vent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="circuit.h" />
+    <ClInclude Include="coureur.h" />
+    <ClInclude Include="denivele.h" />
     <ClInclude Include="simu.h" />
+    <ClInclude Include="vent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
